@@ -17,29 +17,8 @@ body {
 		animation: bg-green 1s ease-in;
 	}
 }
-#inspiration {
-	position: fixed;
-	right: 1em;
-	bottom: 1em;
-	& a {
-		display: inline-block;
-		float: left;
-		text-decoration: none;
-		font-weight: bold;
-		color: white;
-		transition: all 1s ease;
-		&:hover {
-			color: #212121;
-		}
-	}
-	& p {
-		margin: 0;
-		padding-left: .4em;
-		display: inline-block;
-		float: right;
-		color: rgba(255,255,255,.6);
-	}
-}
+
+
 #pin {
 	background: $pinpad-color;
 	width: 20em; min-width: 320px;

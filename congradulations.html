@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Congrats!</title>
+    <style>
+        body {
+            background: #f0f8ff;
+            color: #333;
+            font-family: 'Segoe UI', sans-serif;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #2ecc71;
+        }
+
+        p {
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>🎉 Congradulations!</h1>
+    <p>YOU HAVE WON !!!</p>
+</body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var access = localStorage.getItem('pinAccess');
+  
+      if (access !== 'granted') {
+        // If no access flag, clear the page
+        document.body.innerHTML = '';
+      } else {
+        // Optional: clear the flag so user has to enter PIN again next time
+        localStorage.removeItem('pinAccess');
+      }
+    });
+  </script>
+
+</html>

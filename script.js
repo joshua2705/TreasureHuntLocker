@@ -19,10 +19,15 @@
 			if( input !== correct ) {
 				dots.forEach( (dot) => $(dot).addClass( 'wrong' ) );
 				$( document.body ).addClass( 'wrong' );
+                localStorage.setItem('pinAccess', 'not-granted');
 			}
 			else {
 				dots.forEach( (dot) => $(dot).addClass( 'correct' ) );
 				$( document.body ).addClass( 'correct' );
+                localStorage.setItem('pinAccess', 'granted');
+                setTimeout(function () {
+                    window.location.href = 'congradulations.html';
+                  }, 1000);
 			}
 			setTimeout(function() {
 				dots.forEach( (dot) => dot.className = 'dot' );
